@@ -1,0 +1,39 @@
+class Test03
+{
+	static void transposeMatrix(int arr[][])
+	{
+		int temp[][]=new int[arr.length][arr.length];
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr[i].length;j++)
+			{
+				temp[i][j]=arr[j][i];
+			}
+		}
+		for(int k=0;k<arr.length;k++)
+		{
+			for(int l=0;l<arr[k].length;l++)
+			{
+				arr[k][l]=temp[k][l];
+			}
+		}
+		print(arr);
+	}
+
+	static void print(int arr[][])
+	{
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr[i].length;j++)
+			{
+				System.out.print(arr[i][j]+" ");
+			}
+		}
+	}
+	public static void main(String[]args)
+	{
+		int arr[][]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+		transposeMatrix(arr);
+
+	}	
+}
